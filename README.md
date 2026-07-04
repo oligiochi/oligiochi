@@ -32,7 +32,7 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 
 ## Current Focus
 
-- **Decentralized V2X cooperative smart parking** — my main research project: a fully decentralized vehicle-to-everything system where vehicles cooperate to discover and allocate parking without a central coordinator.
+- **Decentralized V2X cooperative smart parking** — my main research project: a fully decentralized vehicle-to-everything system where vehicles cooperate to discover and allocate parking without a central coordinator, built on [VaN3Twin](https://github.com/h3-vanet/VaN3Twin), a multi-stack ETSI-compliant V2X framework for ns-3.
 - **Cloud-native and container experiments** — building and breaking things with Docker, Podman, and Kubernetes to understand isolation, orchestration, and the trade-offs between them.
 - **Networking and Linux internals** — protocol-level experiments, traffic analysis, and small tools that poke at the kernel's networking stack.
 - **Personal open-source projects** — utilities and libraries I publish as they become useful to more people than just me.
@@ -145,10 +145,25 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 -->
 
 <div align="center">
-  <a href="https://github.com/oligiochi/SiwBook">
+  <a href="https://github.com/h3-vanet/VaN3Twin">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=SiwBook&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="SiwBook repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=SiwBook&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=h3-vanet&repo=VaN3Twin&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="VaN3Twin repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=h3-vanet&repo=VaN3Twin&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+    </picture>
+  </a>
+  <a href="https://github.com/progetto-asw2024/asw-goodmusic-kubernetes">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic-kubernetes&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="asw-goodmusic-kubernetes repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic-kubernetes&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+    </picture>
+  </a>
+</div>
+
+<div align="center">
+  <a href="https://github.com/progetto-asw2024/asw-goodmusic-kafka">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic-kafka&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="asw-goodmusic-kafka repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic-kafka&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
     </picture>
   </a>
   <a href="https://github.com/oligiochi/MazeGenKotlin">
@@ -159,20 +174,13 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
   </a>
 </div>
 
-<div align="center">
-  <a href="https://github.com/oligiochi/DiaDiaPlus">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=DiaDiaPlus&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="DiaDiaPlus repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=DiaDiaPlus&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-  <a href="https://github.com/oligiochi/oligiochi.github.io">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=oligiochi.github.io&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="oligiochi.github.io repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=oligiochi.github.io&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-</div>
+<!--
+  Other pinnable repositories, if you want to swap any card:
+  - SIWprojectMonteVerde/SIW-Ripetizioni (Java web app)
+  - MonteGuacamole/DatasetGen2026 (Python, dataset generation)
+  - progetto-asw2024/asw-goodmusic / asw-goodmusic-docker / asw-goodmusic-docker-compose
+  - oligiochi/SiwBook, oligiochi/DiaDiaPlus (Kotlin), oligiochi/oligiochi.github.io
+-->
 
 ## Research Interests
 
