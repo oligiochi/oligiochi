@@ -81,8 +81,8 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-    <img height="170" alt="General GitHub statistics" src="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&custom_title=GitHub%20Stats%20%C2%B7%20since%20Aug%202019&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+    <img height="170" alt="General GitHub statistics" src="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&custom_title=GitHub%20Stats%20%C2%B7%20since%20Aug%202019&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=oligiochi&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E">
@@ -97,8 +97,8 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
-    <img alt="Most used languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
+    <img alt="Most used languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
   </picture>
 </div>
 
@@ -106,8 +106,8 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&hide_border=true&bg_color=0D1117&color=C9D1D9&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF">
-    <img alt="Contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&hide_border=true&bg_color=FFFFFF&color=24292F&line=0969DA&point=0969DA&area=true&area_color=0969DA">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&custom_title=Contribution%20Activity%20%C2%B7%20last%2031%20days&hide_border=true&bg_color=0D1117&color=C9D1D9&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF">
+    <img alt="Contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&custom_title=Contribution%20Activity%20%C2%B7%20last%2031%20days&hide_border=true&bg_color=FFFFFF&color=24292F&line=0969DA&point=0969DA&area=true&area_color=0969DA">
   </picture>
 </div>
 
@@ -129,7 +129,7 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
     branch, i.e. the last time the snake was regenerated. The animation always
     covers the rolling last ~12 months of contributions up to that date.
   -->
-  <img alt="Snake last generated" src="https://img.shields.io/github/last-commit/oligiochi/oligiochi/output?label=updated&style=flat&color=58A6FF&labelColor=24292e">
+  <img alt="Snake last generated" src="https://img.shields.io/github/last-commit/oligiochi/oligiochi/output?label=last%2012%20months%20%C2%B7%20updated&style=flat&color=58A6FF&labelColor=24292e">
 </div>
 
 <!--
