@@ -1,252 +1,202 @@
 <!--
   ============================================================================
   GitHub Profile README — oligiochi
+  Designed as the homepage of a technical portfolio, not a widget gallery.
+  Reading funnel: hook → proof (thesis) → more proof (projects) → how I think
+  → what I use → where I test it → where I come from → what I want → data.
   ============================================================================
-  HOW THIS FILE WORKS
-  - This repository (oligiochi/oligiochi) is special: its README is rendered
-    on your GitHub profile page.
-  - Everything that must be replaced by you is marked with a comment starting
-    with "CUSTOMIZE:".
-  - Widgets are embedded twice (dark + light variant) inside <picture> tags so
-    they adapt automatically to the viewer's GitHub theme.
-  - Color palette used across all widgets (GitHub's own accent colors):
-      dark  theme → accent #58A6FF, text #C9D1D9, muted #8B949E, bg #0D1117
-      light theme → accent #0969DA, text #24292F, muted #57606A, bg #FFFFFF
-    If you change one widget's colors, change them everywhere to keep the
-    profile visually consistent.
+  MAINTENANCE NOTES
+  - Widgets adapt to dark/light via <picture> + prefers-color-scheme.
+    Palette: accent #58A6FF (dark) / #0969DA (light), muted #8B949E / #57606A.
+  - The snake is generated daily by .github/workflows/generate-snake.yml
+    (Platane/snk + month/weekday labels) into the "output" branch.
+  - Everything marked "CUSTOMIZE:" is yours to keep current.
   ============================================================================
 -->
 
-<h1 align="center">Hi, I'm Giovanni Oliverio</h1>
+<h1 align="center">Giovanni Oliverio</h1>
 
 <p align="center">
-  MSc Computer Engineering student · Distributed Systems · Backend · DevOps
+  MSc Computer Engineering student · Distributed Systems researcher · Roma Tre University
+</p>
+
+<p align="center">
+  <strong>I build systems where no one is in charge — and everything still works.</strong>
+</p>
+
+<p align="center">
+  My thesis lets vehicles negotiate parking with no server, no leader, and no consensus round:
+  gossip, CRDTs, and Rust. Most of what I build asks the same question at a different scale —
+  from vehicular networks down to the rootless containers running my home lab.
+</p>
+
+<p align="center">
+  <a href="#the-thesis--parking">Thesis</a> ·
+  <a href="#selected-projects">Projects</a> ·
+  <a href="https://www.linkedin.com/in/giovanni-oliverio-6419a2329/">LinkedIn</a> ·
+  <a href="mailto:oligiovi2@gmail.com">Email</a>
 </p>
 
 ---
 
-## Introduction
+## The thesis · ParKing
 
-I'm a Computer Engineering master's student at Roma Tre University, specializing in distributed systems and decentralized coordination. My thesis — developed in cooperation with Virginia Commonwealth University — is a leaderless peer-to-peer coordination system for vehicular networks, written in Rust and validated experimentally on an HPC cluster. Around that core I work on backend services, rootless containers, Linux networking, and security, because building systems and keeping them reliable and safe are the same job.
+**Cooperative smart parking for vehicular networks — fully decentralized, leaderless, infrastructure-free.**
 
-## Current Focus
+Urban parking coordination normally assumes a backend: a server that knows the spots and assigns them. In a VANET that assumption breaks — vehicles come and go, connectivity is intermittent, and any central coordinator is a single point of failure with a coverage problem. ParKing removes the assumption entirely: vehicles share what they know through **epidemic gossip**, merge conflicting views with **CRDTs** (no consensus round needed), and index space with **H3 geospatial cells** so knowledge stays local to where it matters.
 
-- **ParKing — cooperative smart parking for VANETs**: a fully decentralized, leaderless system where vehicles coordinate parking with no infrastructure and no central consensus — H3 geospatial indexing, epidemic gossip, and CRDTs in Rust/Tokio. Validated through SUMO + ns-3 (NR-V2X Mode 2) co-simulation on an HPC cluster, reaching a 92–98% park-rate, with Bayesian parameter optimization (+33% over the sequential benchmark). Built on [VaN3Twin](https://github.com/h3-vanet/VaN3Twin), a multi-stack ETSI-compliant V2X framework for ns-3.
-- **Homelab and Linux infrastructure**: rootless Podman containers — AdGuard Home serving on port 53 through an nftables DNAT redirect with zero system privileges — plus network namespaces, veth, and server-hardening experiments.
-- **Security**: Capture The Flag challenges (CyberChallenge.IT) and a growing collection of web-security exercises — SQL injection, XSS, command injection, hardening.
+- **Stack** — Rust / Tokio for the coordination engine; SUMO + ns-3 (**NR-V2X Mode 2** sidelink) co-simulation for realistic mobility and radio; SLURM / Apptainer for experiments on an HPC cluster.
+- **Results** — 92–98% park-rate across scenarios; Bayesian parameter optimization improved the baseline by **+33%** over the sequential benchmark.
+- **Research context** — MSc thesis at Roma Tre University in cooperation with **Virginia Commonwealth University** (Richmond, VA), where I spent spring 2026 validating the system experimentally.
+- **Status** — thesis in progress, graduating October 2026. The repository is private until publication; the simulation framework it builds on is open: [VaN3Twin](https://github.com/h3-vanet/VaN3Twin), a multi-stack ETSI-compliant V2X framework for ns-3.
 
-## Technologies
+## Selected Projects
 
-<!--
-  CUSTOMIZE: badges use shields.io with a uniform dark background (24292e) and
-  white logos. To add one:
-  https://img.shields.io/badge/<LABEL>-24292e?style=flat&logo=<SIMPLE_ICONS_SLUG>&logoColor=white
-  Logo slugs come from https://simpleicons.org (Java's slug is "openjdk").
-  If a slug doesn't exist the badge still renders, just without the icon.
-  The top-languages card on the right only counts public repositories owned by
-  this account; "hide=" filters noise languages. See SETUP.md to include
-  private repositories (requires self-hosting).
--->
+<!-- CUSTOMIZE: every project follows the same schema —
+     Problem → Solution → Tech → Why it matters → Status. Keep it that way. -->
 
-<table>
-  <tr>
-    <td valign="top">
-      <strong>Languages</strong><br>
-      <img alt="Rust" src="https://img.shields.io/badge/Rust-24292e?style=flat&logo=rust&logoColor=white">
-      <img alt="Java" src="https://img.shields.io/badge/Java-24292e?style=flat&logo=openjdk&logoColor=white">
-      <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-24292e?style=flat&logo=kotlin&logoColor=white">
-      <img alt="Python" src="https://img.shields.io/badge/Python-24292e?style=flat&logo=python&logoColor=white">
-      <img alt="C" src="https://img.shields.io/badge/C-24292e?style=flat&logo=c&logoColor=white">
-      <img alt="C#" src="https://img.shields.io/badge/C%23-24292e?style=flat&logo=sharp&logoColor=white">
-      <img alt="Bash" src="https://img.shields.io/badge/Bash-24292e?style=flat&logo=gnubash&logoColor=white">
-      <br><br>
-      <strong>Backend & Data</strong><br>
-      <img alt="Spring Boot" src="https://img.shields.io/badge/Spring_Boot-24292e?style=flat&logo=springboot&logoColor=white">
-      <img alt="REST APIs" src="https://img.shields.io/badge/REST_APIs-24292e?style=flat&logoColor=white">
-      <img alt="SQL" src="https://img.shields.io/badge/SQL-24292e?style=flat&logoColor=white">
-      <img alt="Elasticsearch" src="https://img.shields.io/badge/Elasticsearch-24292e?style=flat&logo=elasticsearch&logoColor=white">
-      <img alt="Gradle" src="https://img.shields.io/badge/Gradle-24292e?style=flat&logo=gradle&logoColor=white">
-      <img alt="Maven" src="https://img.shields.io/badge/Maven-24292e?style=flat&logo=apachemaven&logoColor=white">
-      <br><br>
-      <strong>Distributed Systems</strong><br>
-      <img alt="Microservices" src="https://img.shields.io/badge/Microservices-24292e?style=flat&logoColor=white">
-      <img alt="Kafka" src="https://img.shields.io/badge/Kafka-24292e?style=flat&logo=apachekafka&logoColor=white">
-      <img alt="Consul" src="https://img.shields.io/badge/Consul-24292e?style=flat&logo=consul&logoColor=white">
-      <img alt="CRDT" src="https://img.shields.io/badge/CRDT-24292e?style=flat&logoColor=white">
-      <img alt="P2P" src="https://img.shields.io/badge/P2P-24292e?style=flat&logoColor=white">
-      <img alt="VANET" src="https://img.shields.io/badge/VANET-24292e?style=flat&logoColor=white">
-      <br><br>
-      <strong>DevOps & Cloud Native</strong><br>
-      <img alt="Podman" src="https://img.shields.io/badge/Podman_(rootless)-24292e?style=flat&logo=podman&logoColor=white">
-      <img alt="Docker" src="https://img.shields.io/badge/Docker-24292e?style=flat&logo=docker&logoColor=white">
-      <img alt="Kubernetes" src="https://img.shields.io/badge/Kubernetes-24292e?style=flat&logo=kubernetes&logoColor=white">
-      <img alt="Jenkins" src="https://img.shields.io/badge/Jenkins-24292e?style=flat&logo=jenkins&logoColor=white">
-      <img alt="CI/CD" src="https://img.shields.io/badge/CI%2FCD-24292e?style=flat&logo=githubactions&logoColor=white">
-      <br><br>
-      <strong>Networking & Security</strong><br>
-      <img alt="TCP/IP" src="https://img.shields.io/badge/TCP%2FIP-24292e?style=flat&logoColor=white">
-      <img alt="Linux Networking" src="https://img.shields.io/badge/Linux_Networking-24292e?style=flat&logo=linux&logoColor=white">
-      <img alt="nftables" src="https://img.shields.io/badge/nftables-24292e?style=flat&logoColor=white">
-      <img alt="Web Security" src="https://img.shields.io/badge/Web_Security_%2F_CTF-24292e?style=flat&logoColor=white">
-      <br><br>
-      <strong>Simulation</strong><br>
-      <img alt="SUMO" src="https://img.shields.io/badge/SUMO-24292e?style=flat&logoColor=white">
-      <img alt="ns-3" src="https://img.shields.io/badge/ns--3_(NR--V2X)-24292e?style=flat&logoColor=white">
-      <br><br>
-      <strong>OS & Tools</strong><br>
-      <img alt="Linux" src="https://img.shields.io/badge/Linux-24292e?style=flat&logo=linux&logoColor=white">
-      <img alt="Ubuntu" src="https://img.shields.io/badge/Ubuntu-24292e?style=flat&logo=ubuntu&logoColor=white">
-      <img alt="Git" src="https://img.shields.io/badge/Git-24292e?style=flat&logo=git&logoColor=white">
-      <img alt="IntelliJ IDEA" src="https://img.shields.io/badge/IntelliJ_IDEA-24292e?style=flat&logoColor=white">
-      <img alt="VS Code" src="https://img.shields.io/badge/VS_Code-24292e?style=flat&logoColor=white">
-      <img alt="Wireshark" src="https://img.shields.io/badge/Wireshark-24292e?style=flat&logo=wireshark&logoColor=white">
-    </td>
-    <td valign="top" align="center">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
-        <img alt="Most used languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
-      </picture>
-    </td>
-  </tr>
-</table>
+### [GoodMusic](https://github.com/progetto-asw2024/asw-goodmusic) — event-driven microservices, end to end
 
-## GitHub Statistics
+- **Problem** — decompose a social music platform into services that stay consistent without coupling to each other.
+- **Solution** — event-driven architecture on **Kafka**, service discovery with **Consul**, REST APIs on **Spring Boot**; deployed three ways to compare the trade-offs: [Docker Compose](https://github.com/progetto-asw2024/asw-goodmusic-docker), [Kafka-centric](https://github.com/progetto-asw2024/asw-goodmusic-kafka), and [Kubernetes](https://github.com/progetto-asw2024/asw-goodmusic-kubernetes).
+- **Tech** — Java, Spring Boot, Kafka, Consul, Docker, Kubernetes.
+- **Why it matters** — it's the same distributed-systems thinking as the thesis, applied to the backend stack companies actually run.
+- **Status** — complete (Software Architectures course project).
 
-<!--
-  Widgets, all actively maintained as of 2026:
-  - Stats + Top Languages + repo pins: github-stats-extended
-    (stats-organization/github-stats-extended), the maintained successor of
-    anuraghazra/github-readme-stats.
-  - Streak: DenverCoder1/github-readme-streak-stats (streak-stats.demolab.com).
-  - Activity graph: ashutosh00710/github-readme-activity-graph.
-  - Snake: Platane/snk + month/weekday labels, generated daily by
-    .github/workflows/generate-snake.yml into the "output" branch.
-  Each widget appears twice inside a <picture> tag: the <source> is the dark
-  variant, the <img> fallback is the light variant. GitHub picks the right one
-  based on the viewer's theme.
-  CUSTOMIZE: "oligiochi" appears in every widget URL — replace it everywhere
-  if you reuse this profile under a different username.
--->
+### [cyberSecurity](https://github.com/oligiochi/cyberSecurity) — offensive security, learned by doing
+
+- **Problem** — you can't harden what you can't break.
+- **Solution** — a growing collection of solved security exercises and CTF work from **CyberChallenge.IT** (the Italian national cybersecurity program): SQL injection, XSS, command injection, Linux server hardening.
+- **Tech** — web security tooling, Docker labs, Linux.
+- **Why it matters** — security as a design constraint, not an afterthought — the same least-privilege mindset that shapes my infrastructure work.
+- **Status** — actively maintained as I solve new challenges.
+
+### Home Lab — production thinking on home hardware
+
+- **Problem** — run real services, reachable from the internet, without ever granting a container root.
+- **Solution** — described in [its own section below](#home-lab), because it earned one.
+- **Status** — running 24/7, serving [ildon.me](https://ildon.me).
+
+### [MazeGenKotlin](https://github.com/oligiochi/MazeGenKotlin) — algorithms for fun
+
+Maze generation in **Kotlin** — small, self-contained, and the reason procedural generation still shows up in my side reading. Complete.
+
+## Design Philosophy
+
+<!-- CUSTOMIZE: these are principles with receipts — each one points at real work.
+     If you add one, anchor it to something you actually built. -->
+
+- **Leaderless by default.** A central coordinator is a single point of failure wearing a costume. If coordination can emerge from gossip and convergent data structures, it should. *(ParKing)*
+- **Measure, don't assume.** Claims about distributed behavior are worthless without experiments — co-simulation, benchmarks, and parameter sweeps come before opinions. *(SUMO + ns-3 on HPC, Bayesian optimization)*
+- **Least privilege is hygiene, not paranoia.** If DNS can be served from an unprivileged container, root was never necessary. *(rootless Podman home lab)*
+- **The network is part of the design.** Namespaces, routing, and packet filters shape system behavior as much as code does — treating them as "ops details" is how systems surprise you. *(nftables, Linux namespaces, Wireshark)*
+
+## Skills
+
+<!-- CUSTOMIZE: bold = core, used in real projects; plain = working knowledge.
+     Text instead of badge walls: denser, searchable, and honest. -->
+
+| | |
+|---|---|
+| **Languages** | **Rust** (Tokio — thesis daily driver), **Java**, **Kotlin**, **Python**, C, C#, Bash |
+| **Distributed systems** | **CRDTs**, **epidemic gossip**, peer-to-peer coordination, microservices, **Kafka**, Consul, VANET / V2X |
+| **Backend & data** | **Spring Boot**, REST APIs, SQL, Elasticsearch, Gradle, Maven |
+| **DevOps & cloud native** | **Podman (rootless)**, **Docker** / Compose, **Kubernetes**, Jenkins, CI/CD |
+| **Networking & security** | **Linux networking** (namespaces, veth, **nftables** NAT/DNAT), TCP/IP, DNS, web security & CTF, server hardening |
+| **Simulation & HPC** | **SUMO**, **ns-3 (NR-V2X Mode 2)**, SLURM, Apptainer |
+
+## Home Lab
+
+The lab exists to answer a question I kept running into: **how much "production" can you build without root?**
+
+Everything runs in **rootless Podman** containers on an Ubuntu home server. The forcing function is DNS: **AdGuard Home** must answer on port 53, which an unprivileged process cannot bind — solved with an **nftables DNAT redirect**, so the container serves the whole LAN's DNS with zero system privileges. Services I write myself (including deployments of my [data-engineering projects](https://github.com/orgs/IngegneriaDati/repositories)) are composed with Podman Compose, published through a reverse proxy, and reach the internet through a **Cloudflare Tunnel** on [ildon.me](https://ildon.me) — no ports forwarded, no attack surface volunteered. Remote access goes over VPN.
+
+It is a small system, but it is treated like a real one: least privilege, layered ingress, and every convenience earned rather than granted. This is where the design philosophy above meets actual traffic.
+
+## Journey
+
+<!-- Text fallback for raw-file readers:
+     2021 diploma (98/100) → 2021–24 BSc Roma Tre (108/110), ML thesis on
+     aerospace launchers → 2024– MSc → 2026 research contract Roma Tre +
+     thesis research at VCU (USA) → next: distributed systems engineering. -->
+
+```mermaid
+timeline
+    2021 : Scientific high school diploma (98 out of 100)
+    2021-2024 : BSc Computer Engineering, Roma Tre (108 out of 110) : ML thesis — predicting acoustic loads on aerospace launchers
+    2024 : MSc Computer Engineering : the shift from ML to distributed systems
+    2026 : Research contract, Roma Tre — leaderless VANET coordination : Thesis research at Virginia Commonwealth University (USA)
+    Next : Distributed systems engineering, industry or research
+```
+
+I got into this through **machine learning** — my BSc thesis predicted acoustic loads on aerospace launchers. But what kept pulling at me wasn't the models; it was the systems around them: how computation is distributed, how state converges, what happens when the network misbehaves. The MSc made that the main thread, and the research contract at Roma Tre — then the thesis work at VCU — turned it into my specialty.
+
+## Research
+
+- **Current** — leaderless multi-agent coordination for vehicular networks: gossip protocols, CRDT-based state convergence, and large-scale SUMO + ns-3 co-simulation validated on HPC (with Roma Tre and Virginia Commonwealth University).
+- **Academic focus** — MSc Computer Engineering, Roma Tre, graduating October 2026; ML background from the BSc thesis, drawn on when a systems problem genuinely calls for learned components.
+- **Next** — decentralized coordination at larger scales: what gossip and CRDTs can replace in infrastructure we currently centralize by habit.
+
+## What I'm Looking For
+
+<!-- CUSTOMIZE: update availability, and add remote/relocation preferences. -->
+
+- **Distributed systems / backend engineering roles** — available from **October 2026**, after graduation.
+- **Research collaboration** on decentralized coordination, V2X, or vehicular networking — my thesis tooling and results are open for discussion before publication.
+- **Open source** in the same orbit: Rust systems tooling, container runtimes, networking.
+
+Currently deepening: Tokio internals, Kubernetes networking, NR-V2X.
+
+## Activity
 
 <div align="center">
   <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake-dark.svg">
+    <img alt="Contribution snake animation over the last 12 months of commits" src="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake.svg">
+  </picture>
+  <br>
+  <img alt="Date the snake animation was last regenerated" src="https://img.shields.io/github/last-commit/oligiochi/oligiochi/output?label=last%2012%20months%20%C2%B7%20updated&style=flat&color=58A6FF&labelColor=24292e">
+</div>
+
+<details>
+<summary><strong>GitHub statistics</strong> — stats, streak, languages, activity graph</summary>
+<br>
+<div align="center">
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&custom_title=GitHub%20Stats%20%C2%B7%20since%20Aug%202019&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-    <img height="170" alt="General GitHub statistics" src="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&custom_title=GitHub%20Stats%20%C2%B7%20since%20Aug%202019&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+    <img height="170" alt="General GitHub statistics since August 2019" src="https://github-stats-extended.vercel.app/api?username=oligiochi&show_icons=true&include_all_commits=true&custom_title=GitHub%20Stats%20%C2%B7%20since%20Aug%202019&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=oligiochi&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakNum=C9D1D9&sideNums=C9D1D9&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E">
     <img height="170" alt="Contribution streak" src="https://streak-stats.demolab.com?user=oligiochi&hide_border=true&background=FFFFFF&ring=0969DA&fire=0969DA&currStreakNum=24292F&sideNums=24292F&currStreakLabel=0969DA&sideLabels=57606A&dates=57606A">
   </picture>
-</div>
-
-<br>
-
-<div align="center">
+  <br><br>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
+    <img alt="Most used languages across public repositories" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&custom_title=Top%20Languages%20%C2%B7%20all-time%2C%20public%20repos&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
+  </picture>
+  <br><br>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&custom_title=Contribution%20Activity%20%C2%B7%20last%2031%20days&hide_border=true&bg_color=0D1117&color=C9D1D9&line=58A6FF&point=58A6FF&area=true&area_color=58A6FF">
-    <img alt="Contribution graph" src="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&custom_title=Contribution%20Activity%20%C2%B7%20last%2031%20days&hide_border=true&bg_color=FFFFFF&color=24292F&line=0969DA&point=0969DA&area=true&area_color=0969DA">
+    <img alt="Contribution activity graph over the last 31 days" src="https://github-readme-activity-graph.vercel.app/graph?username=oligiochi&custom_title=Contribution%20Activity%20%C2%B7%20last%2031%20days&hide_border=true&bg_color=FFFFFF&color=24292F&line=0969DA&point=0969DA&area=true&area_color=0969DA">
   </picture>
 </div>
+</details>
 
-<br>
+## Contact
 
-<!--
-  Contribution snake: generated by .github/workflows/generate-snake.yml
-  (Platane/snk + a post-processing script that adds month/weekday labels).
--->
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake-dark.svg">
-    <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake.svg">
-  </picture>
-  <br>
-  <!--
-    "last updated" badge: reads the date of the latest commit on the "output"
-    branch, i.e. the last time the snake was regenerated. The animation always
-    covers the rolling last ~12 months of contributions up to that date.
-  -->
-  <img alt="Snake last generated" src="https://img.shields.io/github/last-commit/oligiochi/oligiochi/output?label=last%2012%20months%20%C2%B7%20updated&style=flat&color=58A6FF&labelColor=24292e">
-</div>
-
-<!--
-  Visitor counter: intentionally omitted. Hit counters read as dated, the
-  numbers are trivially inflated, and strong engineering profiles skip them.
-  If you still want one, the least intrusive maintained option is komarev's
-  profile-views badge — uncomment the line below:
-  <p align="center"><img src="https://komarev.com/ghpvc/?username=oligiochi&style=flat&color=58A6FF" alt="Profile views"></p>
--->
-
-## Featured Projects
-
-<!--
-  CUSTOMIZE: each card pins one repository via github-stats-extended.
-  A card renders an error image until the repository exists and is public.
-  To pin a repository that lives in one of your organizations, set BOTH
-  "username=<org-name>" and "repo=<repo-name>" in the two URLs.
-  Other pinnable repositories: progetto-asw2024/asw-goodmusic-kubernetes,
-  progetto-asw2024/asw-goodmusic-kafka, SIWprojectMonteVerde/SIW-Ripetizioni,
-  MonteGuacamole/DatasetGen2026, oligiochi/SiwBook, oligiochi/DiaDiaPlus.
-  The ParKing thesis repo (h3-vanet/vanet-parking) can be pinned the same way
-  once it is public.
--->
+If you work on distributed systems, vehicular networking, or anything that shouldn't have a single point of failure — let's talk.
 
 <div align="center">
-  <a href="https://github.com/h3-vanet/VaN3Twin">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=h3-vanet&repo=VaN3Twin&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="VaN3Twin repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=h3-vanet&repo=VaN3Twin&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-  <a href="https://github.com/progetto-asw2024/asw-goodmusic">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="asw-goodmusic repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=progetto-asw2024&repo=asw-goodmusic&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-</div>
-
-<div align="center">
-  <a href="https://github.com/oligiochi/cyberSecurity">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=cyberSecurity&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="cyberSecurity repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=cyberSecurity&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-  <a href="https://github.com/oligiochi/MazeGenKotlin">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=MazeGenKotlin&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="MazeGenKotlin repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=MazeGenKotlin&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
-    </picture>
-  </a>
-</div>
-
-## Research Interests
-
-- **Distributed systems** — leaderless coordination, epidemic gossip protocols, and conflict-free replicated data types (CRDTs); my thesis applies them to vehicular scenarios where no central authority or infrastructure can be assumed.
-- **Vehicular networking (V2X)** — NR-V2X sidelink communication and large-scale co-simulation (SUMO + ns-3), including experimental validation on HPC clusters.
-- **Cloud computing** — container isolation (rootless in particular), orchestration, and what "cloud native" actually costs in observability and operational complexity.
-- **Security** — web security, exploitation techniques from CTF practice, and Linux server hardening as a design constraint rather than an afterthought.
-- **Machine learning** — an academic grounding (BSc thesis on ML prediction of acoustic loads on aerospace launchers) I draw on when a systems problem genuinely calls for learned components.
-
-## Connect
-
-<!--
-  CUSTOMIZE: replace "YOUR-LINKEDIN-HANDLE" with the last segment of your
-  LinkedIn profile URL. Icons come from https://skillicons.dev — add more with
-  <a href="..."><img src="https://skillicons.dev/icons?i=<name>" width="48"></a>
-  (e.g. i=discord, i=twitter, i=stackoverflow).
--->
-
-<div align="center">
-  <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE">
-    <img src="https://skillicons.dev/icons?i=linkedin" width="48" alt="LinkedIn">
+  <a href="https://www.linkedin.com/in/giovanni-oliverio-6419a2329/">
+    <img src="https://skillicons.dev/icons?i=linkedin" width="44" alt="LinkedIn — Giovanni Oliverio">
   </a>
   &nbsp;&nbsp;
   <a href="mailto:oligiovi2@gmail.com">
-    <img src="https://skillicons.dev/icons?i=gmail" width="48" alt="Email">
+    <img src="https://skillicons.dev/icons?i=gmail" width="44" alt="Email — oligiovi2@gmail.com">
   </a>
   &nbsp;&nbsp;
-  <a href="https://github.com/oligiochi">
-    <img src="https://skillicons.dev/icons?i=github" width="48" alt="GitHub">
+  <a href="https://ildon.me">
+    <img src="https://skillicons.dev/icons?i=cloudflare" width="44" alt="ildon.me — self-hosted services">
   </a>
 </div>
