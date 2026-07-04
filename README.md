@@ -90,10 +90,15 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
   </picture>
 </div>
 
+<!--
+  CUSTOMIZE: the top-languages card only looks at repositories owned by this
+  account, and "hide=" filters out languages that would distort the picture
+  (Jupyter notebooks from coursework, plain HTML/CSS). Adjust the list freely.
+-->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
-    <img alt="Most used languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=C9D1D9">
+    <img alt="Most used languages" src="https://github-stats-extended.vercel.app/api/top-langs/?username=oligiochi&layout=compact&langs_count=8&hide=jupyter%20notebook,html,css&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=24292F">
   </picture>
 </div>
 
@@ -132,32 +137,33 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
 
 <!--
   CUSTOMIZE: each card pins one repository via github-stats-extended.
-  Replace the repo names below with your real repositories — a card renders an
-  error image until the repository exists and is public.
+  A card renders an error image until the repository exists and is public.
+  To pin a repository that lives in one of your organizations, set BOTH
+  "username=<org-name>" and "repo=<repo-name>" in the two URLs.
   Add more cards by copying a <picture> block and changing the "repo=" value
   (in both the dark and light URLs) plus the surrounding <a href>.
 -->
 
 <div align="center">
-  <a href="https://github.com/oligiochi/v2x-smart-parking">
+  <a href="https://github.com/oligiochi/SiwBook">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=v2x-smart-parking&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="v2x-smart-parking repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=v2x-smart-parking&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=SiwBook&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="SiwBook repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=SiwBook&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
     </picture>
   </a>
-  <a href="https://github.com/oligiochi/container-experiments">
+  <a href="https://github.com/oligiochi/MazeGenKotlin">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=container-experiments&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="container-experiments repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=container-experiments&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=MazeGenKotlin&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="MazeGenKotlin repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=MazeGenKotlin&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
     </picture>
   </a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/oligiochi/networking-lab">
+  <a href="https://github.com/oligiochi/DiaDiaPlus">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=networking-lab&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
-      <img alt="networking-lab repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=networking-lab&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=DiaDiaPlus&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9">
+      <img alt="DiaDiaPlus repository card" src="https://github-stats-extended.vercel.app/api/pin/?username=oligiochi&repo=DiaDiaPlus&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=24292F">
     </picture>
   </a>
   <a href="https://github.com/oligiochi/oligiochi.github.io">
