@@ -123,6 +123,13 @@ I'm a Computer Engineering graduate student focused on how large systems are bui
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake-dark.svg">
     <img alt="Contribution snake animation" src="https://raw.githubusercontent.com/oligiochi/oligiochi/output/github-contribution-grid-snake.svg">
   </picture>
+  <br>
+  <!--
+    "last updated" badge: reads the date of the latest commit on the "output"
+    branch, i.e. the last time the snake was regenerated. The animation always
+    covers the rolling last ~12 months of contributions up to that date.
+  -->
+  <img alt="Snake last generated" src="https://img.shields.io/github/last-commit/oligiochi/oligiochi/output?label=updated&style=flat&color=58A6FF&labelColor=24292e">
 </div>
 
 <!--
